@@ -1,6 +1,7 @@
 
 {
-  "title": "BMI & 기초대사량 계산기",
+  "title": "BMI & BMR 계산기",
+  "subtitle": "체질량지수와 기초대사량을 쉽게 계산하세요",
   "height": "키 (cm)",
   "weight": "몸무게 (kg)",
   "age": "나이",

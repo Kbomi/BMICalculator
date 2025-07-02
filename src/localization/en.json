@@ -1,6 +1,7 @@
 
 {
   "title": "BMI & BMR Calculator",
+  "subtitle": "Easily calculate your BMI and BMR",
   "height": "Height (cm)",
   "weight": "Weight (kg)",
   "age": "Age",

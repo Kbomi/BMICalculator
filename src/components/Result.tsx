@@ -39,7 +39,7 @@ const Result: React.FC<ResultProps> = ({ translations, bmi, bmr }) => {
         </p>
       )}
       {bmr > 0 && (
-        <p className="text-lg font-semibold text-gray-800">
+        <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
           {translations.bmr_result} {bmr} kcal
         </p>
       )}

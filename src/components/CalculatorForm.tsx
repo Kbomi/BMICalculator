@@ -35,38 +35,38 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({ translations, onCalcula
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-700">{translations.height}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{translations.height}</label>
         <input
           type="number"
           value={height}
           onChange={(e) => setHeight(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 text-gray-900 dark:text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700">{translations.weight}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{translations.weight}</label>
         <input
           type="number"
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 text-gray-900 dark:text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700">{translations.age}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{translations.age}</label>
         <input
           type="number"
           value={age}
           onChange={(e) => setAge(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 text-gray-900 dark:text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700">{translations.gender}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{translations.gender}</label>
         <select
           value={gender}
           onChange={(e) => setGender(e.target.value as 'male' | 'female')}
-          className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-gray-900 dark:text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         >
           <option value="male">{translations.male}</option>
           <option value="female">{translations.female}</option>
