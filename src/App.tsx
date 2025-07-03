@@ -28,6 +28,10 @@ export interface Translations {
   bmiTitle: string;
   bmrTitle: string;
   caloriesPerDay: string;
+  healthTips: string;
+  tip1: string;
+  tip2: string;
+  tip3: string;
 }
 
 const translations: { en: Translations; ko: Translations } = { en, ko };

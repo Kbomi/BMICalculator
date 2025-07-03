@@ -1,5 +1,5 @@
 
-import { Flame, TrendingUp, UserCheck } from 'lucide-react';
+import { CheckCircle, Flame, Lightbulb, TrendingUp, UserCheck } from 'lucide-react';
 import React from 'react';
 import { Translations } from '../App';
 
@@ -77,7 +77,6 @@ const Result: React.FC<ResultProps> = ({ translations, bmi, bmr }) => {
         </div>
 
         <div className='space-y-6 p-6 pt-0'>
-          
           <div className="text-center py-2">
             <div className={`text-4xl font-bold mb-2 ${bmr > 0 ? 'text-gray-800 dark:text-gray-200' : "text-muted-foreground"}`}>
               {bmr > 0 ? bmr : "--.-"}
@@ -86,15 +85,33 @@ const Result: React.FC<ResultProps> = ({ translations, bmi, bmr }) => {
               {bmr > 0 ? translations.caloriesPerDay : ''}
             </div>
           </div>
-          
         </div>
       </div>
 
-      {bmr > 0 && (
-        <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-           {bmr} kcal
-        </p>
-      )}
+      {/* Health Tips Card */}
+      <div className='w-full rounded-lg border bg-card text-card-foreground shadow-sm bg-gradient-to-r from-green-400 to-blue-400 text-white'>
+        <div className='space-y-6 p-6 pt-6'>
+          <h3 className="text-lg font-semibold mb-3 flex items-center">
+            <Lightbulb className="mr-3 h-5 w-5" />
+            {translations.healthTips}
+          </h3>
+          
+          <ul className="space-y-2 text-sm opacity-95">
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+              {translations.tip1}
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+              {translations.tip2}
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+              {translations.tip3}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

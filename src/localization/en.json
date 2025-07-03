@@ -18,5 +18,9 @@
   "inputInfo" : "Enter Information",
   "bmiTitle": "Body Mass Index (BMI)",
   "bmrTitle": "Basal Metabolic Rate (BMR)",
-  "caloriesPerDay": "Calories/Day"
+  "caloriesPerDay": "Calories/Day",
+  "healthTips": "Health Tips",
+  "tip1": "Maintain a balanced diet and regular exercise",
+  "tip2": "Stay adequately hydrated",
+  "tip3": "Get regular health check-ups"
 }

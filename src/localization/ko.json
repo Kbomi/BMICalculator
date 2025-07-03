@@ -18,5 +18,9 @@
   "inputInfo" : "정보 입력",
   "bmiTitle": "체질량지수 (BMI)",
   "bmrTitle": "기초대사량 (BMR)",
-  "caloriesPerDay": "칼로리/일"
+  "caloriesPerDay": "칼로리/일",
+  "healthTips": "건강 팁",
+  "tip1": "균형 잡힌 식단과 규칙적인 운동이 중요합니다",
+  "tip2": "충분한 수분 섭취를 유지하세요",
+  "tip3": "정기적인 건강검진을 받으시기 바랍니다"
 }
