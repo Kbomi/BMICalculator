@@ -9,10 +9,14 @@
   "male": "남성",
   "female": "여성",
   "calculate": "계산하기",
-  "bmi_result": "당신의 BMI는:",
-  "bmr_result": "당신의 기초대사량은:",
   "underweight": "저체중",
   "normal_weight": "정상 체중",
   "overweight": "과체중",
-  "obesity": "비만"
+  "obesity": "비만",
+  "lightMode": "라이트 모드",
+  "darkMode": "다크 모드",
+  "inputInfo" : "정보 입력",
+  "bmiTitle": "체질량지수 (BMI)",
+  "bmrTitle": "기초대사량 (BMR)",
+  "caloriesPerDay": "칼로리/일"
 }

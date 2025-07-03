@@ -8,7 +8,7 @@ import ko from './localization/ko.json';
 import './App.css';
 import { Heart, Moon, Sun } from 'lucide-react';
 
-interface Translations {
+export interface Translations {
   title: string;
   subtitle: string;
   height: string;
@@ -18,12 +18,16 @@ interface Translations {
   male: string;
   female: string;
   calculate: string;
-  bmi_result: string;
-  bmr_result: string;
   underweight: string;
   normal_weight: string;
   overweight: string;
   obesity: string;
+  lightMode: string;
+  darkMode: string;
+  inputInfo: string;
+  bmiTitle: string;
+  bmrTitle: string;
+  caloriesPerDay: string;
 }
 
 const translations: { en: Translations; ko: Translations } = { en, ko };
@@ -83,19 +87,21 @@ function App() {
               className={`px-4 py-2 text-sm font-medium ${darkMode ? 'text-gray-900' : 'text-white'} ${darkMode ? 'bg-gray-200' : 'bg-gray-800'} rounded-md ${darkMode ? 'hover:bg-gray-300' : 'hover:bg-gray-700'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
             >
               {darkMode ? <Sun className="inline h-4 w-4 mr-2" /> : <Moon className="inline h-4 w-4 mr-2" />}
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
+              {darkMode ? translations[language].lightMode : translations[language].darkMode}
             </button>
             </div>
           </div>
         </div>
       </header>
     
-      <div className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-gray-800 rounded-lg shadow-md transition-colors duration-300">
-        <CalculatorForm
-          translations={translations[language]}
-          onCalculate={handleCalculate}
-        />
-        <Result translations={translations[language]} bmi={bmi} bmr={bmr} />
+      <div className="max-w-4xl mx-auto px-4 py-8 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div className="grid lg:grid-cols-2 gap-8">
+          <CalculatorForm
+            translations={translations[language]}
+            onCalculate={handleCalculate}
+          />
+          <Result translations={translations[language]} bmi={bmi} bmr={bmr} />
+        </div>
       </div>
     </div>
   );

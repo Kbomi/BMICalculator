@@ -9,10 +9,14 @@
   "male": "Male",
   "female": "Female",
   "calculate": "Calculate",
-  "bmi_result": "Your BMI is:",
-  "bmr_result": "Your BMR is:",
   "underweight": "Underweight",
   "normal_weight": "Normal weight",
   "overweight": "Overweight",
-  "obesity": "Obesity"
+  "obesity": "Obesity",
+  "lightMode": "Light Mode",
+  "darkMode": "Dark Mode",
+  "inputInfo" : "Enter Information",
+  "bmiTitle": "Body Mass Index (BMI)",
+  "bmrTitle": "Basal Metabolic Rate (BMR)",
+  "caloriesPerDay": "Calories/Day"
 }
