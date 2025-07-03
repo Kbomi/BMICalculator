@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "BMI/BMR 계산기",
+  "name": "BMI/BMR 계산기 | 체질량지수, 기초대사량 계산",
+  "description": "BMI(체질량지수)와 BMR(기초대사량)을 계산하여 건강 상태를 확인하세요. 키, 몸무게, 나이, 성별을 입력하여 정확한 수치를 확인하고 건강 관리에 활용하세요.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +9,18 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "/images/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "/images/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#4338ca",
   "background_color": "#ffffff"
 }
