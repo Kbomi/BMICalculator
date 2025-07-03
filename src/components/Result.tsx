@@ -13,14 +13,18 @@ const Result: React.FC<ResultProps> = ({ translations, bmi, bmr }) => {
   const getBmiCategory = (bmi: number): string => {
     if (bmi < 18.5) return translations.underweight;
     if (bmi >= 18.5 && bmi < 23) return translations.normal_weight;
-    if (bmi >= 23 && bmi < 25) return translations.overweight;
-    return translations.obesity;
+    if (bmi >= 23 && bmi < 25) return translations.before_obesity;
+    if (bmi >= 25 && bmi < 30) return translations.obesity1;
+    if (bmi >= 30 && bmi < 35) return translations.obesity2;
+    return translations.obesity3;
   };
 
   const getBmiClass = (bmi: number): string => {
     if (bmi < 18.5) return 'text-blue-500';
     if (bmi >= 18.5 && bmi < 23) return 'text-green-500';
-    if (bmi >= 23 && bmi < 25) return 'text-yellow-500';
+    if (bmi >= 23 && bmi < 25) return 'text-green-500';
+    if (bmi >= 25 && bmi < 30) return 'text-red-500';
+    if (bmi >= 30 && bmi < 35) return 'text-red-500';
     return 'text-red-500';
   };
 
@@ -53,15 +57,23 @@ const Result: React.FC<ResultProps> = ({ translations, bmi, bmr }) => {
             </div>
             <div className="flex items-center justify-between p-2 rounded-lg border">
               <span className="text-sm text-muted-foreground">{translations.normal_weight}</span>
-              <span className="text-sm font-medium text-green-600">18.5 - 24.9</span>
+              <span className="text-sm font-medium text-green-600">18.5 - 22.9</span>
             </div>
             <div className="flex items-center justify-between p-2 rounded-lg border">
-              <span className="text-sm text-muted-foreground">{translations.overweight}</span>
-              <span className="text-sm font-medium text-orange-500">25.0 - 29.9</span>
+              <span className="text-sm text-muted-foreground">{translations.before_obesity}</span>
+              <span className="text-sm font-medium text-orange-500">23.0 - 24.9</span>
             </div>
             <div className="flex items-center justify-between p-2 rounded-lg border">
-              <span className="text-sm text-muted-foreground">{translations.obesity}</span>
-              <span className="text-sm font-medium text-red-500">≥ 30.0</span>
+              <span className="text-sm text-muted-foreground">{translations.obesity1}</span>
+              <span className="text-sm font-medium text-red-500">25.0 - 29.9</span>
+            </div>
+            <div className="flex items-center justify-between p-2 rounded-lg border">
+              <span className="text-sm text-muted-foreground">{translations.obesity2}</span>
+              <span className="text-sm font-medium text-red-500">30.0 - 34.9</span>
+            </div>
+            <div className="flex items-center justify-between p-2 rounded-lg border">
+              <span className="text-sm text-muted-foreground">{translations.obesity3}</span>
+              <span className="text-sm font-medium text-red-500">≥ 35.0</span>
             </div>
           </div>
         </div>

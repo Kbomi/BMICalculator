@@ -11,8 +11,10 @@
   "calculate": "Calculate",
   "underweight": "Underweight",
   "normal_weight": "Normal weight",
-  "overweight": "Overweight",
-  "obesity": "Obesity",
+  "before_obesity": "Pre obesity",
+  "obesity1": "1st obesity",
+  "obesity2": "2nd  obesity",
+  "obesity3": "3rd obesity",
   "lightMode": "Light Mode",
   "darkMode": "Dark Mode",
   "inputInfo" : "Enter Information",
@@ -22,5 +24,6 @@
   "healthTips": "Health Tips",
   "tip1": "Maintain a balanced diet and regular exercise",
   "tip2": "Stay adequately hydrated",
-  "tip3": "Get regular health check-ups"
+  "tip3": "Get regular health check-ups",
+  "footerText": "This calculator is for general reference only. For accurate health assessments, consult a healthcare professional.\nIf you have any feedback or issues with this site, please contact 93rlaqhal@gmail.com."
 }

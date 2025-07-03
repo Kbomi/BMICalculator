@@ -11,8 +11,10 @@
   "calculate": "계산하기",
   "underweight": "저체중",
   "normal_weight": "정상 체중",
-  "overweight": "과체중",
-  "obesity": "비만",
+  "before_obesity": "비만전단계",
+  "obesity1": "1단계 비만",
+  "obesity2": "2단계 비만",
+  "obesity3": "3단계 비만",
   "lightMode": "라이트 모드",
   "darkMode": "다크 모드",
   "inputInfo" : "정보 입력",
@@ -22,5 +24,6 @@
   "healthTips": "건강 팁",
   "tip1": "균형 잡힌 식단과 규칙적인 운동이 중요합니다",
   "tip2": "충분한 수분 섭취를 유지하세요",
-  "tip3": "정기적인 건강검진을 받으시기 바랍니다"
+  "tip3": "정기적인 건강검진을 받으시기 바랍니다",
+  "footerText": "이 계산기는 일반적인 참고용이며, 정확한 건강 평가는 의료 전문가와 상담하세요.\n해당 사이트에 의견/문제가 있다면 93rlaqhal@gmail.com으로 연락주세요."
 }

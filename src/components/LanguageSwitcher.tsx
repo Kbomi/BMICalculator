@@ -6,13 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 interface LanguageSwitcherProps {
   onSwitch: (lang: 'en' | 'ko') => void;
   currentLanguage: 'en' | 'ko';
+  darkMode: boolean;
 }
 
-const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ onSwitch, currentLanguage }) => {
-  const toggleLanguage = () => {
-    onSwitch(currentLanguage === 'en' ? 'ko' : 'en');
-  };
-
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ onSwitch, currentLanguage, darkMode }) => {
   const languageOptions = [
   { value: "ko", label: "한국어", flag: "🇰🇷" },
   { value: "en", label: "English", flag: "🇺🇸" },
@@ -33,7 +30,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ onSwitch, currentLa
         </SelectTrigger>
         <SelectContent>
           {languageOptions.map((option) => (
-            <SelectItem key={option.value} value={option.value}>
+            <SelectItem key={option.value} value={option.value} className={`bg-background dark:bg-gray-900 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
               <div className="flex items-center gap-2">
                 <span>{option.flag}</span>
                 <span>{option.label}</span>
@@ -43,15 +40,6 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ onSwitch, currentLa
         </SelectContent>
       </Select>
     </div>
-  );
-
-  return (
-    <button
-      onClick={toggleLanguage}
-      className="px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-    >
-      {currentLanguage === 'en' ? '한국어' : 'English'}
-    </button>
   );
 };
 

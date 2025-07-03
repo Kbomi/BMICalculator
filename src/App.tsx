@@ -6,7 +6,7 @@ import { calculateBmi, calculateBmr } from './utils/calculations';
 import en from './localization/en.json';
 import ko from './localization/ko.json';
 import './App.css';
-import { Heart, Moon, Sun } from 'lucide-react';
+import { Heart, Info, Moon, Sun } from 'lucide-react';
 
 export interface Translations {
   title: string;
@@ -20,8 +20,10 @@ export interface Translations {
   calculate: string;
   underweight: string;
   normal_weight: string;
-  overweight: string;
-  obesity: string;
+  before_obesity: string;
+  obesity1: string;
+  obesity2: string;
+  obesity3: string;
   lightMode: string;
   darkMode: string;
   inputInfo: string;
@@ -32,6 +34,7 @@ export interface Translations {
   tip1: string;
   tip2: string;
   tip3: string;
+  footerText: string;
 }
 
 const translations: { en: Translations; ko: Translations } = { en, ko };
@@ -73,7 +76,7 @@ function App() {
       {/* Header */}
       <header className="bg-card shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center justify-between md:flex-row">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <Heart className="h-5 w-5 text-primary-foreground" />
@@ -83,8 +86,9 @@ function App() {
                 <p className="text-muted-foreground text-sm">{translations[language].subtitle}</p>
               </div>
             </div>
+
             <div className="flex items-center space-x-4">
-            <LanguageSwitcher onSwitch={handleLanguageSwitch} currentLanguage={language} />
+            <LanguageSwitcher onSwitch={handleLanguageSwitch} currentLanguage={language} darkMode={darkMode} />
 
             <button
               onClick={toggleDarkMode}
@@ -98,7 +102,7 @@ function App() {
         </div>
       </header>
     
-      <div className="max-w-4xl mx-auto px-4 py-8 bg-white dark:bg-gray-800 transition-colors duration-300">
+      <main className="max-w-4xl mx-auto px-4 py-8 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="grid lg:grid-cols-2 gap-8">
           <CalculatorForm
             translations={translations[language]}
@@ -106,7 +110,20 @@ function App() {
           />
           <Result translations={translations[language]} bmi={bmi} bmr={bmr} />
         </div>
-      </div>
+      </main>
+
+      <footer className="bg-card border-t mt-12">
+        <div className="max-w-4xl mx-auto px-4 py-6">
+          <div className="text-center text-sm text-muted-foreground">
+            <div className='flex justify-center gap-2'>
+              <Info className="h-4 w-4" />
+              <p className="whitespace-pre-wrap">
+                {translations[language].footerText}
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
