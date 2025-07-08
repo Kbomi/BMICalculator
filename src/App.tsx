@@ -40,7 +40,7 @@ export interface Translations {
 const translations: { en: Translations; ko: Translations } = { en, ko };
 
 function App() {
-  const [language, setLanguage] = useState<'en' | 'ko'>('en');
+  const [language, setLanguage] = useState<'en' | 'ko'>('ko');
   const [bmi, setBmi] = useState<number>(0);
   const [bmr, setBmr] = useState<number>(0);
   const [darkMode, setDarkMode] = useState<boolean>(false);
